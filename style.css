@@ -1,0 +1,359 @@
+@import url('https://fonts.googleapis.com/css2?family=Bai+Jamjuree:wght@400;700&family=Inika:wght@700&family=Inter:wght@300;400;700&display=swap');
+
+body {
+    margin: auto;
+    background-color: #F6F6F6;
+}
+
+a {
+    color: #fff;
+    text-decoration: none; 
+    font-family: 'Bai Jamjuree', sans-serif;
+    font-size: 1.25rem;
+ }
+
+header > div {
+    padding: 15px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header > div div {
+    display: flex;
+    align-items: center;
+}
+
+main {
+    position: relative;
+    top: 85px;
+}
+
+header {
+    position: fixed;
+    width: 100vw;
+    background: linear-gradient(#1a1a1a, #171459);
+    box-shadow: 0px 10px 20px rgba(4, 2, 85, 0.5);
+    z-index: 2;
+}
+
+header ul {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: nowrap; 
+    list-style-type: none;
+    padding-inline-start: 0px;
+    margin-left: 40px;
+}
+
+li {
+    display: inline-block;
+    padding-right: 40px;
+}
+
+span {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+}
+
+button {
+    border: none;
+    background-color: white;
+    margin: 10px;
+
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+}
+
+.hide {
+    display: none;
+}
+
+main .catalogue {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    transition: all 0.3s ease 0s;
+
+    color: #000000;
+    text-decoration: none; 
+    font-family: 'Bai Jamjuree', sans-serif;
+}
+
+.Product {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 10px;
+}
+
+main img {
+    position: relative;
+    transition: 0.8s;
+}
+
+main img:hover {
+    z-index: 1;
+    transform: scale(1.15);
+}
+
+.add-to-cart {
+    background-color: #1c1e6f;
+    color: #fff!important;
+    padding: 10px 160px;
+    font-weight: 600;
+    box-shadow: 0px 8px 12px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+    border: none;
+    
+    display: block;
+    text-align: center;
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+}
+
+/*--------------Pop Up----------------*/
+.popup{
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.5);
+    /* overflow-x: hidden;
+    overflow-y: auto; */
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.8s ease 0s;
+    top: 0;
+    left: 0;
+    z-index: 2;
+}
+
+.popup-body {
+    min-height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.popup-body.popup-add-product {
+    position: absolute;
+    left: -100%;
+    transition: all .5s;
+}
+
+.popup-body.popup-add-product.open {
+    left: 0%;
+}
+
+.popup.open {
+    opacity: 1;
+    visibility: visible;
+}
+
+.popup.open .dws-form {
+    opacity: 1;
+    visibility: visible;
+}
+
+/*------Form------*/
+.dws-form {
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 10px;
+    max-width: 360px;
+
+    color: #000000;
+    text-decoration: none; 
+    font-family: 'Bai Jamjuree', sans-serif;
+}
+
+.dws-form a {
+    text-decoration: none;
+    transition: .5s;
+    color: #1c1e6f;
+}
+
+.dws-form a:hover:first-child {
+    color: #1c1e6f;
+}
+
+.dws-form ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.dws-form input {
+    display: block;
+    width: 100%;
+}
+
+.tab-form1, .tab-form2 {
+    background-color: white;
+    display: none;
+    padding: 30px;
+}
+
+.tab-form1.active, .tab-form2.active {
+    display: block;
+}
+
+label.tab1, label.tab2{
+    font-weight: 600;
+    padding: 15px;
+    display: inline-block;
+    border-radius: 3px;
+    /* margin-bottom: -1px; */
+    cursor: pointer;
+}
+
+label.tab1.active1 {
+    box-shadow: 2px 0px 2px rgba(0, 0, 0, 0.3);
+    font-size: 18px;
+}
+
+label.tab2.active2 {
+    box-shadow: -2px 0px 2px rgba(0, 0, 0, 0.3);
+    font-size: 18px;
+}
+
+.input {
+    font-size: 16px;
+    border: 2px solid #e9eaea;
+    padding: 12px 14px;
+    box-sizing: border-box;
+    margin-bottom: 22px;
+    outline: none;
+   }
+
+   a.enter-button{
+    background: #1c1e6f;
+    color: #ffffff;
+    font-size: 18px;
+    text-transform: uppercase;
+    border-radius: 10px;
+    box-shadow: 0px 8px 12px rgba(0, 0, 0, 0.25);
+    display: block;
+    text-align: center;
+    line-height: 46px;
+    margin-top: 30px;
+    margin-bottom: 10px;
+    position: relative;
+    z-index: 2;
+    overflow: hidden;
+   }
+
+   .enter-button::before, .enter-button::after, .buy-button::before, .buy-button::after, .add-to-cart::before ,.add-to-cart:after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-color: #3c3e9c;
+    position: absolute;
+    left: -100%;
+    transition: .3s;
+    z-index: -1;
+   }
+   
+  .enter-button::after, .buy-button::after, .add-to-cart:after  {
+    left: 0;
+    bottom: -100%;
+    transition-delay: .2s;
+   }
+
+   .enter-button:hover::before, .buy-button:hover::before, .add-to-cart:hover::before {
+    top: 0;
+    left: 0;
+   }
+   
+   .enter-button:hover::after, .buy-button:hover::after, .add-to-cart:hover:after  {
+    bottom: 0;
+    right: 0;
+   }
+
+   .social {
+    display: flex;
+    justify-content: space-between;
+    font-size: 24px;
+   }
+
+   .social a {
+    width: 40px;
+    height: 40px;
+    display: block;
+    line-height: 40px;
+    text-align: center;
+   }
+
+   .social + a {
+    margin-top: 10px;
+    display: block;
+    font-size: 12px;
+    text-align: center;
+   }
+
+   /*----------Cart----------*/
+.cart {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+    background-color: rgba(255, 255, 255);
+    padding: 10px;
+
+    color: #000000;
+    text-decoration: none; 
+    font-family: 'Bai Jamjuree', sans-serif;
+}
+.items span {
+    display: flex;
+    align-items: center;
+}
+.buy-button {
+    background-color: #1c1e6f;
+    color: #fff!important;
+    padding: 10px 100px;
+    font-weight: 600;
+    box-shadow: 0px 8px 12px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+    border: none;
+
+    display: block;
+    text-align: center;
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+}
+/*---------Add item---------*/
+.add-item {
+    width: 30vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+    background-color: rgb(245, 245, 245);
+    padding: 10px;
+
+    color: #000000;
+    text-decoration: none; 
+    font-family: 'Bai Jamjuree', sans-serif;
+}
+
+.product-specs {
+    position: relative;
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+}
+
+.enter-button.add-item-button {
+    text-transform: none;
+}
+
+.add-product-h2 {
+    font-size: 2em;
+}

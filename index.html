@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.2.1.js"></script>
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css" type="text/css"/>
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <div>
+            <div>
+                <img src="pngwing.com.png" alt="microsoft" width="300px">
+                <ul>
+                    <li><a href="#popup2" class="popup-link">Bucket</a></li>
+                    <li><a href="#popup3" class="popup-link">Add product</a></li>
+                </ul>
+            </div>
+            <a href="#popup1" class="popup-link">Sign In</a>
+        </div>
+    </header>
+    <main>
+        <div class="catalogue">
+            <div class="Product">
+                <img class = "photo" src="https://img-prod-cms-rt-microsoft-com.akamaized.net/cms/api/am/imageFileData/RE50yvl?ver=ced0&q=90&m=6&h=705&w=1253&b=%23FFFFFFFF&o=f&p=140&aim=true" alt="Product laptop"  height="300">
+                <span class="name"> All-in-One 28 inch </span>
+                <span class="price">4500$</span>
+                <button class="add-to-cart">Add to bucket</button>
+            </div>
+            <div class="Product">
+                <img class = "photo" src="https://img-prod-cms-rt-microsoft-com.akamaized.net/cms/api/am/imageFileData/RE50MHK?ver=98c1&q=90&m=6&h=990&w=1758&b=%23FFFFFFFF&l=f&o=t&aim=true " alt="Product laptop"  height="300">
+                <span class="name"> Laptop 15 inch </span>
+                <span class="price">1500$</span>
+                <button class="add-to-cart">Add to bucket</button>
+            </div>
+            <div class="Product">
+                <img class = "photo" src="https://img-prod-cms-rt-microsoft-com.akamaized.net/cms/api/am/imageFileData/RE4OXzi?ver=3a58" alt="Product laptop" height="300">
+                <span class="name"> Laptop pro 15 inch</span>
+                <span class="price">2800$</span>
+                <button class="add-to-cart">Add to bucket</button>
+            </div>
+            <div class="Product">
+                <img class = "photo" src="https://img-prod-cms-rt-microsoft-com.akamaized.net/cms/api/am/imageFileData/RWULX0?ver=b03d&q=90&m=6&h=705&w=1253&b=%23FFFFFFFF&o=f&p=140&aim=true" alt="Product Tablet" height="300">
+                <span class="name"> Laptop 13 inch </span>
+                <span class="price">1300$</span>
+                <button class="add-to-cart">Add to bucket</button>
+            </div>
+            <div class="Product">
+                <img class = "photo" src="https://img-prod-cms-rt-microsoft-com.akamaized.net/cms/api/am/imageFileData/RE50ytn?ver=1e05&q=90&m=6&h=705&w=1253&b=%23FFFFFFFF&o=f&p=140&aim=true" alt="Product Tablet" height="300">
+                <span class="name"> Tablet 13 inch </span>
+                <span class="price">1000$</span>
+                <button class="add-to-cart">Add to bucket</button>
+            </div>
+            <div class="Product">
+                <img class = "photo" src="https://cdn-dynmedia-1.microsoft.com/is/image/microsoftcorp/Feature-Surface-Go-3-Type-Cover-3000x1682:VP5-800x450?fmt=png-alpha" alt="Product Tablet" height="300">
+                <span class="name"> Tablet 10.5 inch </span>
+                <span class="price">800$</span>
+                <button class="add-to-cart">Add to bucket</button>
+            </div>
+        </div>
+        <div class="popup" id="popup1">
+            <div class="popup-body">
+                <div class="popup-container dws-form">
+                    <label class="tab1 active1" title="Authorization page">Authorization</label>
+                    <label class="tab2" title="Registration page">Registration</label>
+                    <a href="" class="popup-close close-popup">X</a>
+                    <form class="tab-form1 active">
+                        <input class="input" type="email" placeholder="Input E-mail">
+                        <input class="input" type="password" placeholder="Input password">
+                        <a href="#" class="enter-button">Sign in</a>
+                        <ul class="social">
+                        <li><a href="#" class="fa fa-facebook"></a></li>
+                        <li><a href="#" class="fa fa-twitter"></a></li>
+                        <li><a href="#" class="fa fa-google"></a></li>
+                        <li><a href="#" class="fa fa-vk"></a></li>
+                        </ul>
+                        <a href="#">Forgot password or E-mail</a>
+                    </form>
+                    <form class="tab-form2">
+                    <input class="input" type="email" placeholder="Input E-mail">
+                    <input class="input" type="text" placeholder="Input your name">
+                    <input class="input" type="password" placeholder="Input password">
+                    <a href="#" class="enter-button">Sign up</a>
+                    <ul class="social">
+                        <li><a href="#" class="fa fa-facebook"></a></li>
+                        <li><a href="#" class="fa fa-twitter"></a></li>
+                        <li><a href="#" class="fa fa-google"></a></li>
+                        <li><a href="#" class="fa fa-vk"></a></li>
+                    </ul>
+                    </form> 
+                </div>
+            </div>
+        </div>
+        <div class="popup" id="popup2">
+            <div class="popup-body">
+                <div class="popup-container cart">
+                   <h2>Bucket</h2>
+                   <div class="items"></div>
+                   <button class="buy-button popup-close">Buy</button>
+                </div>
+            </div>
+        </div>
+        <div class="popup" id="popup3">
+            <div class="popup-body popup-add-product">
+                <div class="popup-container add-item">
+                   <h2 class="add-product-h2">Add product</h2>
+                   <form class="product-specs" name="productSpecs">
+                        <input class="input name" name="name" type="text" placeholder="Name">
+                        <input class="input price" name="price" type="number" placeholder="Cost">
+                        <select class="input">
+                            <option disabled>Choose currency</option>
+                            <option>USD</option>
+                            <option>BYN</option>
+                            <option>RUB</option>
+                        </select>
+                        <input class="input photo" name="photo" type="text" placeholder="PhotoURL">
+                        <br>
+                        <a href="#" class="enter-button add-item-button popup-close">Add product</a>
+                   </form>
+                </div>
+            </div>
+        </div>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
